@@ -74,7 +74,7 @@ class GameScene: SKScene {
                 posX = marginX + column * (nodeSize+2)
                 posY = marginY + row * (nodeSize+2)
                 
-                square.tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                square.tile.fillColor = Colors.instance.purple
                 square.tile.strokeColor = .clear
                 
                 square.tile.position = CGPoint(x: posX, y: posY)
@@ -104,20 +104,20 @@ class GameScene: SKScene {
     
     func setPlayerAndTarget() {
         tileArray[Int(playerPos.x)][Int(playerPos.y)].isPlayer = true
-        tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.fillColor = UIColor(red: 238/255, green: 220/255, blue: 19/255, alpha: 1)
+        tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.fillColor = Colors.instance.yellow
         
         tileArray[Int(targetPos.x)][Int(targetPos.y)].isTarget = true
-        tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.fillColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.fillColor = Colors.instance.orange
                 
         playerId = tileArray[Int(playerPos.x)][Int(playerPos.y)].id
         targetId = tileArray[Int(targetPos.x)][Int(targetPos.y)].id
         
-        movablePlayer.fillColor = UIColor(red: 238/255, green: 220/255, blue: 19/255, alpha: 1)
+        movablePlayer.fillColor = Colors.instance.yellow
         movablePlayer.position = CGPoint(x: 0, y: 0)
         movablePlayer.zPosition = 2
         movablePlayer.isHidden = true
         
-        movableTarget.fillColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        movableTarget.fillColor = Colors.instance.orange
         movableTarget.position = CGPoint(x: 0, y: 0)
         movableTarget.zPosition = 2
         movableTarget.isHidden = true
@@ -175,7 +175,7 @@ class GameScene: SKScene {
                 tileArray[column][row].hCost = 0.0
                 tileArray[column][row].currentTile = false
                 tileArray[column][row].isOnOpenList = false
-                tileArray[column][row].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                tileArray[column][row].tile.fillColor = Colors.instance.purple
                 tileArray[column][row].tile.strokeColor = .clear
                 tileArray[column][row].isObstacle = false
                 tileArray[column][row].parentId = 0
@@ -208,7 +208,7 @@ class GameScene: SKScene {
                     tileArray[column][row].hCost = 0.0
                     tileArray[column][row].currentTile = false
                     tileArray[column][row].isOnOpenList = false
-                    tileArray[column][row].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                    tileArray[column][row].tile.fillColor = Colors.instance.purple
                     tileArray[column][row].tile.strokeColor = .clear
                     tileArray[column][row].isObstacle = false
                     tileArray[column][row].parentId = 0
@@ -295,11 +295,11 @@ class GameScene: SKScene {
                         if tileArray[column][row].tile.contains(pos) && !movingPlayer && !movingTarget {
                             if !tileArray[column][row].isObstacle {
                                 clearBeforePlacingObstacle(x: column, y: row)
-                                tileArray[column][row].tile.fillColor = UIColor(displayP3Red: 95/255, green: 95/255, blue: 95/255, alpha: 1.0)
+                                tileArray[column][row].tile.fillColor = Colors.instance.gray
                                 tileArray[column][row].isObstacle = true
                                 
                             } else {
-                                tileArray[column][row].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                                tileArray[column][row].tile.fillColor = Colors.instance.purple
                                 tileArray[column][row].isObstacle = false
                             }
                         }
@@ -317,7 +317,7 @@ class GameScene: SKScene {
         tileArray[x][y].hCost = 0.0
         tileArray[x][y].currentTile = false
         tileArray[x][y].isOnOpenList = false
-        tileArray[x][y].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+        tileArray[x][y].tile.fillColor = Colors.instance.purple
         tileArray[x][y].tile.strokeColor = .clear
         tileArray[x][y].isObstacle = false
         tileArray[x][y].parentId = 0
@@ -640,13 +640,13 @@ class GameScene: SKScene {
         let id = pathIdList.first
         let pos = idToPos(id: id ?? 0)
         
-        tileArray[pos.x][pos.y].tile.strokeColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        tileArray[pos.x][pos.y].tile.strokeColor = Colors.instance.orange
         tileArray[pos.x][pos.y].tile.lineWidth = 3.0
         
         if pathIdList.count > 1 {
             pathIdList.removeFirst()
         } else {
-            tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.strokeColor = UIColor(red: 238/255, green: 220/255, blue: 19/255, alpha: 1)
+            tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.strokeColor = Colors.instance.yellow
             
             disableUserInteraction(shouldDisable: false)
             
@@ -674,7 +674,7 @@ class GameScene: SKScene {
                     if tileArray[column][row].tile.contains(pos) {
                         
                         tileArray[Int(playerPos.x)][Int(playerPos.y)].isPlayer = false
-                        tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                        tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.fillColor = Colors.instance.purple
                         tileArray[Int(playerPos.x)][Int(playerPos.y)].tile.isHidden = false
                         
                         tileArray[column][row].tile.isHidden = false
@@ -703,11 +703,11 @@ class GameScene: SKScene {
                         
                         tileArray[Int(targetPos.x)][Int(targetPos.y)].isTarget = false
                         tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.removeAllActions()
-                        tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.fillColor = UIColor(red: 44/255, green: 40/255, blue: 57/255, alpha: 1)
+                        tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.fillColor = Colors.instance.purple
                         tileArray[Int(targetPos.x)][Int(targetPos.y)].tile.isHidden = false
                         
                         tileArray[column][row].tile.isHidden = false
-                        tileArray[column][row].tile.fillColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+                        tileArray[column][row].tile.fillColor = Colors.instance.orange
                         
                         tileArray[column][row].isTarget = true
                         targetPos.x = CGFloat(column)

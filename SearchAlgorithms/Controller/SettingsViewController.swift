@@ -80,11 +80,11 @@ class SettingsViewController: UIViewController {
         cardView.layer.cornerRadius = 15.0
         speedStepper.layer.cornerRadius = 5.0
         diagonalCostStepper.layer.cornerRadius = 5.0
-        heuristicsSegmented.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 0.3)
-        heuristicsSegmented.selectedSegmentTintColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        heuristicsSegmented.backgroundColor = Colors.instance.transparentOrange
+        heuristicsSegmented.selectedSegmentTintColor = Colors.instance.orange
         
-        algorithmSegmented.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 0.3)
-        algorithmSegmented.selectedSegmentTintColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        algorithmSegmented.backgroundColor = Colors.instance.transparentOrange
+        algorithmSegmented.selectedSegmentTintColor = Colors.instance.orange
         
         diagonalCostStepper.value = 1.5
         diagonalCostStepper.stepValue = 0.5

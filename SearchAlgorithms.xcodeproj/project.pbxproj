@@ -23,6 +23,7 @@
 		9D7F7E522481E46D00D45F70 /* HintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F7E512481E46D00D45F70 /* HintTableViewCell.swift */; };
 		9D7F7E542481E64F00D45F70 /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F7E532481E64F00D45F70 /* HintViewController.swift */; };
 		9DFE610A2481FA8500E44EDC /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFE61092481FA8500E44EDC /* OnBoardingViewController.swift */; };
+		9DFE610C24843FCC00E44EDC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFE610B24843FCC00E44EDC /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9D7F7E512481E46D00D45F70 /* HintTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTableViewCell.swift; sourceTree = "<group>"; };
 		9D7F7E532481E64F00D45F70 /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
 		9DFE61092481FA8500E44EDC /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		9DFE610B24843FCC00E44EDC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				9D7F7E4D247DB0F800D45F70 /* Model.swift */,
 				9D7F7E4F2481E31A00D45F70 /* Hint.swift */,
 				9D7F7E512481E46D00D45F70 /* HintTableViewCell.swift */,
+				9DFE610B24843FCC00E44EDC /* Colors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				9D35E7A6247B58B7006E7D82 /* Tile.swift in Sources */,
 				9D35E78C247B0B50006E7D82 /* AppDelegate.swift in Sources */,
 				9D7F7E502481E31B00D45F70 /* Hint.swift in Sources */,
+				9DFE610C24843FCC00E44EDC /* Colors.swift in Sources */,
 				9D7F7E4A247B5E6D00D45F70 /* SceneDelegate.swift in Sources */,
 				9D7F7E522481E46D00D45F70 /* HintTableViewCell.swift in Sources */,
 				9D7F7E4E247DB0F800D45F70 /* Model.swift in Sources */,

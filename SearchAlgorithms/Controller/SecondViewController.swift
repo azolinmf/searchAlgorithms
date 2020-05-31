@@ -36,7 +36,7 @@ class SecondViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         (view as! UITableViewHeaderFooterView).contentView.backgroundColor = .black
-        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = Colors.instance.orange
     }
     
     override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
